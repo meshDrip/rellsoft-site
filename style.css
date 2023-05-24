@@ -1,0 +1,151 @@
+/* SVG background image from: https://www.visiwig.com/textures/ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+/* Hero/First page */
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: -webkit-fill-available;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* .hero-bg {
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+  position: absolute;
+  display: flex;
+}
+
+.hero-bg::before {
+  width: 200%;
+  height: 200%;
+  content: "";
+  background: url(./imgs/dots_texture.svg) 0 0 no-repeat;
+  z-index: -1;
+  transform-origin: center;
+  animation: bgRotate 95s linear infinite;
+} */
+
+.hero-bg img {
+  z-index: -1;
+  position: absolute;
+  min-height: 200%;
+  min-width: 200%;
+  top: -50%;
+  left: -50%;
+  animation: bgRotate 95s linear infinite;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: auto;
+  min-height: 50dvh;
+}
+
+.hero-logo {
+  border: black;
+  border-width: .5rem;
+  border-style: solid;
+  border-radius: 0 0 0 2rem;
+  background-color: white;
+  height: 10rem;
+  width: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text {
+  min-height: 10%;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.hero-text span {
+  line-height: .8;
+  font-size: 5rem;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 12rem;
+  display: block;
+}
+
+.hero-text span:first-child {
+  letter-spacing: .26rem;
+}
+
+.hero-button {
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20rem;
+  margin-bottom: auto;
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: black;
+  border-width: .5rem;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  text-align: center;
+}
+
+.hero-button-text {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 1.5rem;
+}
+
+.hero-button-text span {
+  display: block;
+  line-height: 1.5rem;
+}
+
+@keyframes bgRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
